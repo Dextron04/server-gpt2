@@ -12,7 +12,7 @@ model_name = "gpt2"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
-@app.route("/generate", methods=["POST"])
+@app.route("/gpt2/generate", methods=["POST"])
 def generate():
     # Get the input text from the frontend
     data = request.json
@@ -25,7 +25,7 @@ def generate():
     # Return the response
     return jsonify({"response": response})
 
-@app.route("/", methods=["GET"])
+@app.route("/gpt2", methods=["GET"])
 def hello():
     return jsonify({"message": "Oh So you found this section of my server well it has greater purpose than you think"})
 
