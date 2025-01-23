@@ -25,7 +25,7 @@ def generate():
     # Return the response
     return jsonify({"response": response})
 
-@app.route("/gpt2", methods=["GET"])
+@app.route("/gpt2/", methods=["GET"])
 def hello():
     return jsonify({"message": "Oh So you found this section of my server well it has greater purpose than you think"})
 
